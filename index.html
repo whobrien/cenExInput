@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="title">
+            <h1 id="title" class="header">Transcranial Doppler Ultrasound Worksheet</h1>
+        </div>
+        <div id="locationinfo" class="site">
+            <br>
+                <!-- <button id="submitt" class="button">Submit</button>
+            <br><br> -->
+            <label id="other_sonographer" class="label">Sonographer Name: <input type="text" id="other_sonographer" class="input"></label>
+            <label id="sonographer" class="label">Sonographer Role: <select id="sonographer" class="input">
+                <option id="role1">Intensivist</option>
+                <option id="role2">Neurologist</option>
+                <option id="role3">Radiologist</option>
+                <option id="role4">Other</option>
+            </select></label>
+            <br><br>
+            <label id="location" class="label">Location: <select id="location" class="input">
+                <option id="site1">PICU</option>
+                <option id="site2">CICU</option>
+                <option id="site3">Kinshasa</option>
+                <option id="site4">Lodja</option>
+                <option id="site5">Bunia</option> <!--Need to replace Bunia with Nyankunde-->
+                <option id="site6">Lusaka</option>
+                <option id="site9">Chipata</option>
+                <option id="site7">Blantyre</option>
+                <option id="site8">Other</option>
+            </select></label>
+        </div>
+        <br><br>
+        <div id="patinfo">
+            <div id="patinfo" class="nochange"> <!--This div is for patient data that does not change-->
+                <label id="first_name" class="label">First Name: <input type="text" placeholder="First" id="first_name" class="input"></label>
+                <label id="last_name" class="label">Last Name: <input type="text" placeholder="Last" id="last_name" class="input"></label>
+                <br><br>
+                <label id="mrn" class="label">ID/MRN: <input type="number" placeholder="ID/MRN" id="mrn" class="input"></label>
+                <br><br>
+                <label id="age_entered" class="label">Age: <input type="text" placeholder="Age" id="age_entered" class="input"></label>
+                <label id="dob" class="label">Date of Brith: <input type="date" id="dob" class="input"></label>
+                <br><br>
+                <label id="sex" class="label">Sex: <select id="sex" class="input">
+                    <option id="sex1">Female</option>
+                    <option id="sex2">Male</option>
+                </select></label>
+                <br><br>
+                <label id="medical_hx" class="label">Patient History: <input type="text" id="medical_hx" class="input"></label>
+            </div>
+            <br><br>
+            <div id="patVitals" class="change">
+                <label id="study_date" class="label">Study Date: <input type="date" id="study_date" class="input"></label>
+                <label id="tcd_exam" class="label">First or Repeat Exam: <select id="tcm_exam" class="input">
+                    <option id="tcd1">First</option>
+                    <option id="tcd2">Repeat</option>
+                </select></label>
+                <br><br>
+                <label id="tcd_indication" class="label">Indication: <select id="tcd_indication" class="input">
+                    <option id="tcd_indication__1">Acute Change in Neurologic Exam</option>
+                    <option id="tcd_indication__2">AVM</option>
+                    <option id="tcd_indication__3">Brain Death</option>
+                    <option id="tcd_indication__4">Cardiac Arrest</option>
+                    <option id="tcd_indication__5">Cerebral Malaria</option>
+                    <option id="tcd_indication__6">Emboli Detection</option>
+                    <option id="tcd_indication__7">Meningitis/Encephalitis</option>
+                    <option id="tcd_indication__8">Normative Values</option>
+                    <option id="tcd_indication__9">PRES</option>
+                    <option id="tcd_indication__10">Research</option>
+                    <option id="tcd_indication__11">Sickle Cell Disease</option>
+                    <option id="tcd_indication__12">Stroke</option>
+                    <option id="tcd_indication__13">TBI</option>
+                    <option id="tcd_indication__14">Vasospasm Screening</option>
+                    <option id="tcd_indication__15">Other</option>
+                </select></label>
+                <br><br>
+                <label id="height" class="label">Height: <input type="number" placeholder="Height" id="height" class="input">cm</label>      
+                <label id="weight" class="label">Weight: <input type="number" placeholder="Weight" id="weight" class="input">kg</label>
+                <br><br>
+                <label id="muac" class="label">MUAC: <input type="number" placeholder="MUAC" step="0.01" id="muac" class="input"></label> <!--check what are units?-->
+                <br><br>
+                <label id="temperature" class="label">Temperature: <input type="number" placeholder="Temperature" value="37" step="0.1" id="temperature" class="input">C</label>
+                <br><br>
+                <label id="hr" class="label">Heart Rate: <input type="number" placeholder="HR" min="0" max="250" id="hr" class="input"></label> <!--check what are units?-->
+                <br><br>
+                <label id="bp" class="label">Blood Pressure: <input type="number" placeholder="Systolic"id="sbp" class="input"> / <input type="number" placeholder="Diastolic" id="dbp" class="input"></label> <!--check what are units?-->
+                <br><br>
+                <label id="bcs" class="label">BCS: <input type="number"  min="0" max="5" placeholder="BCS" id="bcs" class="input"></label> <!--What are typcal values-->
+                <br><br>
+                <label id="hemoglobin" class="label">Hemoglobin: <input type="number" placeholder="Hbg/Hct/PCV" min="2" max="20" step="0.01" id="hemoglobin" class="input">%</label>
+                <br><br>
+                <label id="scd_dx" class="label">Hbg: <select id="scd_dx" class="input">
+                    <option id="aa1">AA</option>
+                    <option id="AS2">AS</option>
+                    <option id="SS3">SS</option>
+                </select></label>
+                <br><br>
+                <label id="glucose" class="label">Glucose: <input type="number"  placeholder="Glucose" id="glucose" class="input"></label> <!--What are typcal values-->
+                <br><br>
+                <label id="lactate" class="label">Lactate: <input type="number" placeholder="Lactate" id="lactate" class="input"></label>
+                <br><br>
+                <label id="bloodgas" class="label">Blood Gas:</label>
+                    <br>
+                    <label id="ph" class="label">pH: <input type="number" placeholder="pH" id="ph" class="input"></label>
+                    <label id="CO2" class="label">CO2: <input type="number" placeholder="CO2" id="co2" class="input"></label>
+                    <label id="be" class="label">BE: <input type="number" placeholder="BE" id="be" class="input"></label>
+                    <label id="Na" class="label">Na: <input type="number" placeholder="Na" id="na" class="input"></label>
+                <br><br>
+                <label id="icp" class="label">Opening pressure on LP: <input type="number" min="1" max="60" placeholder="ICP" id="icp" class="input"></label>
+                <br><br>
+                <label id="anticonvulsants" class="label">Anticonvulsants: <select id="anticonvulsants" class="input">
+                    <option id="antic1" class="dropdown">Depakote</option>
+                    <option id="antic2" class="dropdown">Fosphenytoin</option>
+                    <option id="antic3" class="dropdown">Keppra</option>
+                    <option id="antic4" class="dropdown">Ketamine</option>
+                    <option id="antic5" class="dropdown">Onfi</option>
+                    <option id="antic6" class="dropdown">Pentobarbital</option>
+                    <option id="antic7" class="dropdown">Phenobarbital</option>
+                    <option id="antic8" class="dropdown">Propofol</option>
+                    <option id="antic9" class="dropdown">Versed</option>
+                    <option id="antic10" class="dropdown">Vimpat</option>
+                    <option id="antic11" class="dropdown">Other</option>
+                </select></label>
+                <br><br>
+                <label id="electrographic_seizures" class="label">Electrographic seizures?: <select id="electrographic_seizures" class="input">
+                    <option id="esy1" class="dropdown">Yes</option>
+                    <option id="esn0" class="dropdown">No</option> 
+                </select>
+                </label>
+                <br><br>
+            </div>
+            <div id=CoW class="div">
+                <!--<img src="img/CoW2.png" alt="Circle of Willis" width="95%">-->
+                <div id="right" class="div">
+                <table id="right" class="table">
+            <tr id="right" class="hRow1"><th colspan="5">Right</th></tr>
+            <tr id="right" class="hRow2"><th>Vessel</th><th>PSV</th><th>EDV</th><th>PI</th><th>MEAN</th></tr>
+                <tr>
+                <td>MCA:</td>
+                <td><input type="number" placeholder="PSV" id="right_mca_vs_cm_sec" class="input"></td>
+                <td><input type="number" placeholder="EDV" id="right_mca_vd_cm_sec" class="input"></td>
+                <td><input type="number" step="0.01" placeholder="PI" id="right_mca_pi" class="input"></td>
+                <td><input type="number" placeholder="MEAN" id="right_mca_vm_cm_sec" class="input"></td>
+            </tr>
+            <tr>
+            <td>ACA:</td>
+                <td><input type="number" placeholder="PSV" id="right_aca_vs_cm_sec" class="input"></td>
+                <td><input type="number" placeholder="EDV" id="right_aca_vd_cm_sec" class="input"></td>
+                <td><input type="number" step="0.01" placeholder="PI" id="right_aca_pi" class="input"></td>
+                <td><input type="number" placeholder="MEAN" id="right_aca_vm_cm_sec" class="input"></td>
+            </tr>
+            <tr>
+                <td>PCA:</td>
+                <td><input type="number" placeholder="PSV" id="right_pca_vs_cm_sec" class="input"></td>
+                <td><input type="number" placeholder="EDV" id="right_pca_vd_cm_sec" class="input"></td>
+                <td><input type="number" step="0.01" placeholder="PI" id="right_pca_pi" class="input"></td>
+                <td><input type="number" placeholder="MEAN" id="right_pca_vm_cm_sec" class="input"></td>
+            </tr>
+            <tr>
+                <td>VA:</td>
+                <td><input type="number" placeholder="PSV" id="right_va_vs_cm_sec" class="input"></td>
+                <td><input type="number" placeholder="EDV" id="right_va_vd_cm_sec" class="input"></td>
+                <td><input type="number" step="0.01" placeholder="PI" id="right_va_pi" class="input"></td>
+                <td><input type="number" placeholder="MEAN" id="right_va_vm_cm_sec" class="input"></td>
+            </tr>
+            <tr>
+                <td  id="right_ex_ica_vm_cm_sec" class="fullrow" colspan="5">
+                    Ex-ICA :<input type="number" placeholder="EICA" id="right_ex_ica_vm_cm_sec" class="input">
+                </td>
+            </tr>
+            <tr>
+                <td  id="right_ex_ica_lr" class="fullrow" colspan="5">
+                    Lindegaard Ratio: <input type="number" step="0.01" placeholder="LR" id="right_ex_ica_lr" class="input">
+                </td>
+            </tr>
+            <tr>
+                <td  id="right_cv_vm_cm_sec" class="fullrow" colspan="5">
+                    MCA Vein: <input type="number" placeholder="MCAVein" id="right_cv_vm_cm_sec" class="input">
+                </td>
+            </tr>
+            <tr>
+                <td  id="right_jvf_vm_cm_sec" class="fullrow" colspan="5">
+                    Jugular Vein: <input type="number" step="0.01" placeholder="JVein" id="right_jvf_vm_cm_sec" class="input">
+                </td>
+            </tr>
+            </table>
+            <br>
+            <br>
+            </div>
+            <div id=leftCoW class="div">
+                <!--<img src="img/CoW2.png" alt="Circle of Willis" width="95%">-->
+                <div id="left" class="div">
+                <table id="left" class="table">
+                <tr id="left" class="hRow1"><th colspan="5">Left</th></tr>
+                <tr id="left" class="lRow2" width="220px"><th>Vessel</th><th>MEAN</th><th>PI</th><th>ESV</th><th>PSV</th></tr>
+                    <tr>
+                        <td>MCA:</td>
+                        <td><input type="number" placeholder="MEAN" id="left_mca_vs_cm_sec" class="input"></td>
+                        <td><input type="number" step="0.01" placeholder="PI" id="left_mca_pi" class="input"></td>
+                        <td><input type="number" placeholder="EDV" id="left_mca_vd_cm_sec" class="input"></td>
+                        <td><input type="number" placeholder="PSV" id="left_mca_vm_cm_sec" class="input"></td>
+                    </tr>
+                <tr>
+                    <td>ACA:</td>
+                    <td><input type="number" placeholder="MEAN" id="left_aca_vs_cm_sec" class="input"></td>
+                    <td><input type="number" step="0.01" placeholder="PI" id="left_aca_pi" class="input"></td>
+                    <td><input type="number" placeholder="EDV" id="left_aca_vd_cm_sec" class="input"></td>
+                    <td><input type="number" placeholder="PSV" id="left_aca_vm_cm_sec" class="input"></td>
+                </tr>
+                <tr>
+                    <td>PCA:</td>
+                    <td><input type="number" placeholder="MEAN" id="left_pca_vs_cm_sec" class="input"></td>
+                    <td><input type="number" step="0.01" placeholder="PI" id="left_pca_pi" class="input"></td>
+                    <td><input type="number" placeholder="EDV" id="left_pca_vd_cm_sec" class="input"></td>
+                    <td><input type="number" placeholder="PSV" id="left_pca_vm_cm_sec" class="input"></td>
+                </tr>
+                <tr>
+                    <td>VA:</td>
+                    <td><input type="number" placeholder="MEAN" id="left_va_vs_cm_sec" class="input"></td>
+                    <td><input type="number" step="0.01" placeholder="PI" id="left_va_pi" class="input"></td>
+                    <td><input type="number" placeholder="EDV" id="left_va_vd_cm_sec" class="input"></td>
+                    <td><input type="number" placeholder="PSV" id="left_va_vm_cm_sec" class="input"></td>
+                </tr>
+                <tr>
+                    <td  id="left_ex_vm_cm_sec" class="fullrow" colspan="5">
+                        Ex-ICA:<input type="number" placeholder="EICA" id="left_ex_vm_cm_sec" class="input">
+                    </td>
+                </tr>
+                <tr>
+                    <td  id="left_ex_ica_lr" class="fullrow" colspan="5">
+                        Lindegaard Ratio:<input type="number" step="0.01" placeholder="LR" id="left_ex_ica_lr" class="input">
+                    </td>
+                </tr>
+                <tr>
+                    <td  id="left_cv_vm_cm_sec" class="fullrow" colspan="5">
+                        MCA Vein:<input type="number" placeholder="MCAVein" id="left_cv_vm_cm_sec" class="input">
+                    </td>
+                </tr>
+                <tr>
+                    <td  id="left_jvf_vm_cm_sec" class="fullrow" colspan="5">
+                        Jugular Vein:<input type="number" step="0.01" placeholder="JVein" id="left_jvf_vm_cm_sec" class="input">
+                    </td>
+                </tr>
+                </table>
+                <br>
+                <br>
+                </div>
+                <div id="other" class="div">
+                    <table id="other" class="table">
+                        <tr id="other" class="hRow1"><th colspan="5">Other</th></tr>
+                        <tr id="other" class="oRow2"><th>Vessel</th><th>PSV</th><th>EDV</th><th>PI</th><th>MEAN</th></tr>
+                        <tr>
+                        <td>OA:</td>
+                        <td><input type="number" placeholder="PSV" id="oa_vs_cm_sec" class="input"></td>
+                        <td><input type="number" placeholder="EDV" id="oa_vd_cm_sec" class="input"></td>
+                        <td><input type="number" step="0.01" placeholder="PI" id="oa_pi" class="input"></td>
+                        <td><input type="number" placeholder="MEAN" id="oa_vm_cm_sec" class="input"></td>
+                    </tr>
+                    <tr>
+                    <td>BA:</td>
+                        <td><input type="number" placeholder="PSV" id="ba_vs_cm_sec" class="input"></td>
+                        <td><input type="number" placeholder="EDV" id="ba_vd_cm_sec" class="input"></td>
+                        <td><input type="number" step="0.01" placeholder="PI" id="ba_pi" class="input"></td>
+                        <td><input type="number" placeholder="MEAN" id="ba_vm_cm_sec" class="input"></td>
+                    </tr>
+                    <!-- <tr>
+                        <td><input type="text" placeholder="other" id="other" class="input"></td>
+                        <td><input type="number" placeholder="PSV" id="oVs" class="input"></td>
+                        <td><input type="number" placeholder="EDV" id="oVd" class="input"></td>
+                        <td><input type="number" step="0.01" placeholder="PI" id="oPi" class="input"></td>
+                        <td><input type="number" placeholder="MEAN" id="oVm" class="input"></td>
+                    </tr> -->
+                    </table>
+                </div>
+            </div>
+            </div>
+        </div>    
+        <button id="submetb" class="button">Submit</button>
+        <script src="tableCSVexporter.js"></script>
+    </body>
+</html>

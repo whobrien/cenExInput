@@ -1,0 +1,19 @@
+div#locationinfo {
+    border: 3px double black;
+}
+
+div#patInfo {
+    border: 3px double black;
+}
+
+div#patinfochange
+
+table#right {
+    border: 2px black;
+    background-color: lightpink;
+}
+
+table#left {
+    border: 2px black;
+    background-color: lightseagreen;
+}

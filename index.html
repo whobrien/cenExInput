@@ -77,6 +77,44 @@
                     <option id="tcd_indication__14">Vasospasm Screening</option>
                     <option id="tcd_indication__15">Other</option>
                 </select></label>
+                <div id="sicklecell" class="hide" style="display: block">
+                    <br><br>
+                    <label id="scd_age_dx" class="lable">Age at Diagnosis: </label><input type="number" min="0" max="18" id="scd_age_dx" class="input">
+                    <br>
+                    <label id="scd_num_transfus" class="label">How many previous transfusions?: </label><input type="number" id="scd_num_transfus" class="input">
+                    <label id="scd_transfus_date" class="label">Date of transfusions?: </label><input type="date" id="scd_transfus_date" class="input">
+                    <br>
+                    <label id="scd_hydroxy" class="label">Hydroxyurea therapy?: </label>
+                        <select id="scd_hydroxy" class="input">
+                            <option id="yes1">Yes</option>
+                            <option id="no0">No</option>
+                        </select>
+                    <br>
+                    <label id="scd_stroke" class="label">Previous Stroke?: </label>
+                        <select id="scd_stroke" class="input">
+                            <option id="yes1">Yes</option>
+                            <option id="no0">No</option>
+                        </select>
+                    <div id="scd_stroke" class="hide" style="display: block">
+                        <label id="residual_deficits_storke" class="label">What are the remaining neurologic defiits?: </label>
+                        <input type="text" id="residual_deficits_stroke" class="input">
+                    </div>
+                    <div id="scd_neuro_sym" class="hide" style="display: block">
+                        <label id="scd_neuro_sym" class="label">New neurologic symptonms since last visit?: </label>
+                        <select id="scd_neuro_sym" class="input">
+                            <option id="yes1">Yes</option>
+                            <option id="no0">No</option>
+                        </select>
+                        <input type="text" id="residual_deficits_neuro" class="input">
+                    </div>
+                    <label id="scd_dx" class="label">Hbg: </label><select id="scd_dx" class="input">
+                        <option id="aa1">AA</option>
+                        <option id="AS2">AS</option>
+                        <option id="SS3">SS</option>
+                    </select>
+                    <label id="wpc" class="label">White Bloodcells: <input type="number" placeholder="WPC" id="wpc" class="input"></label>      
+                    <label id="platelets" class="label">Platelets: <input type="number" placeholder="Plts" id="platelets" class="input"></label>
+                </div>
                 <br><br>
                 <label id="height" class="label">Height: <input type="number" placeholder="Height" id="height" class="input">cm</label>      
                 <label id="weight" class="label">Weight: <input type="number" placeholder="Weight" id="weight" class="input">kg</label>
@@ -92,13 +130,7 @@
                 <label id="bcs" class="label">BCS: <input type="number"  min="0" max="5" placeholder="BCS" id="bcs" class="input"></label> <!--What are typcal values-->
                 <br><br>
                 <label id="hemoglobin" class="label">Hemoglobin: <input type="number" placeholder="Hbg/Hct/PCV" min="2" max="20" step="0.01" id="hemoglobin" class="input">%</label>
-                <br><br>
-                <label id="scd_dx" class="label">Hbg: <select id="scd_dx" class="input">
-                    <option id="aa1">AA</option>
-                    <option id="AS2">AS</option>
-                    <option id="SS3">SS</option>
-                </select></label>
-                <br><br>
+                <br><br>-->
                 <label id="glucose" class="label">Glucose: <input type="number"  placeholder="Glucose" id="glucose" class="input"></label> <!--What are typcal values-->
                 <br><br>
                 <label id="lactate" class="label">Lactate: <input type="number" placeholder="Lactate" id="lactate" class="input"></label>
@@ -138,34 +170,34 @@
                 <div id="right" class="div">
                 <table id="right" class="table">
                     <tr id="right" class="hRow1"><th colspan="5">Right</th></tr>
-                    <tr id="right" class="hRow2"><th>Vessel</th><th>PSV</th><th>EDV</th><th>PI</th><th>MEAN</th></tr>
+                    <tr id="right" class="hRow2"><th>Vessel</th><th>PSV</th><th>EDV</th><th>MEAN</th><th>PI</th></tr>
                     <tr>
                         <td>MCA:</td>
                         <td><input type="number" placeholder="PSV" id="right_mca_vs_cm_sec" class="input"></td>
                         <td><input type="number" placeholder="EDV" id="right_mca_vd_cm_sec" class="input"></td>
-                        <td><input type="number" step="0.01" placeholder="PI" id="right_mca_pi" class="input"></td>
                         <td><input type="number" placeholder="MEAN" id="right_mca_vm_cm_sec" class="input"></td>
+                        <td><input type="number" step="0.01" placeholder="PI" id="right_mca_pi" class="input"></td>
                     </tr>
                     <tr>
                         <td>ACA:</td>
                         <td><input type="number" placeholder="PSV" id="right_aca_vs_cm_sec" class="input"></td>
                         <td><input type="number" placeholder="EDV" id="right_aca_vd_cm_sec" class="input"></td>
-                        <td><input type="number" step="0.01" placeholder="PI" id="right_aca_pi" class="input"></td>
                         <td><input type="number" placeholder="MEAN" id="right_aca_vm_cm_sec" class="input"></td>
+                        <td><input type="number" step="0.01" placeholder="PI" id="right_aca_pi" class="input"></td>
                     </tr>
                     <tr>
                         <td>PCA:</td>
                         <td><input type="number" placeholder="PSV" id="right_pca_vs_cm_sec" class="input"></td>
                         <td><input type="number" placeholder="EDV" id="right_pca_vd_cm_sec" class="input"></td>
-                        <td><input type="number" step="0.01" placeholder="PI" id="right_pca_pi" class="input"></td>
                         <td><input type="number" placeholder="MEAN" id="right_pca_vm_cm_sec" class="input"></td>
+                        <td><input type="number" step="0.01" placeholder="PI" id="right_pca_pi" class="input"></td>
                     </tr>
                     <tr>
-                        <td>VA:</td>
-                        <td><input type="number" placeholder="PSV" id="right_va_vs_cm_sec" class="input"></td>
-                        <td><input type="number" placeholder="EDV" id="right_va_vd_cm_sec" class="input"></td>
-                        <td><input type="number" step="0.01" placeholder="PI" id="right_va_pi" class="input"></td>
-                        <td><input type="number" placeholder="MEAN" id="right_va_vm_cm_sec" class="input"></td>
+                        <td>tICA:</td>
+                        <td><input type="number" placeholder="PSV" id="right_ica_vs_cm_sec" class="input"></td>
+                        <td><input type="number" placeholder="EDV" id="right_ica_vd_cm_sec" class="input"></td>
+                        <td><input type="number" placeholder="MEAN" id="right_ica_vm_cm_sec" class="input"></td>
+                        <td><input type="number" step="0.01" placeholder="PI" id="right_ica_pi" class="input"></td>
                     </tr>
                     <tr>
                         <td  id="right_ex_ica_vm_cm_sec" class="fullrow" colspan="5">
@@ -196,34 +228,34 @@
                 <div id="left" class="div">
                 <table id="left" class="table">
                 <tr id="left" class="hRow1"><th colspan="5">Left</th></tr>
-                <tr id="left" class="lRow2" width="220px"><th>Vessel</th><th>MEAN</th><th>PI</th><th>ESV</th><th>PSV</th></tr>
+                <tr id="left" class="lRow2" width="220px"><th>Vessel</th><th>PSV</th><th>ESV</th><th>MEAN</th><th>PI</th></tr>
                     <tr>
                         <td>MCA:</td>
-                        <td><input type="number" placeholder="MEAN" id="left_mca_vs_cm_sec" class="input"></td>
-                        <td><input type="number" step="0.01" placeholder="PI" id="left_mca_pi" class="input"></td>
-                        <td><input type="number" placeholder="EDV" id="left_mca_vd_cm_sec" class="input"></td>
-                        <td><input type="number" placeholder="PSV" id="left_mca_vm_cm_sec" class="input"></td>
+                            <td><input type="number" placeholder="PSV" id="left_mca_vs_cm_sec" class="input"></td>
+                            <td><input type="number" placeholder="EDV" id="left_mca_vd_cm_sec" class="input"></td>
+                            <td><input type="number" placeholder="MEAN" id="left_mca_vm_cm_sec" class="input"></td>
+                            <td><input type="number" step="0.01" placeholder="PI" id="left_mca_pi" class="input"></td>
                     </tr>
                 <tr>
                     <td>ACA:</td>
-                    <td><input type="number" placeholder="MEAN" id="left_aca_vs_cm_sec" class="input"></td>
-                    <td><input type="number" step="0.01" placeholder="PI" id="left_aca_pi" class="input"></td>
-                    <td><input type="number" placeholder="EDV" id="left_aca_vd_cm_sec" class="input"></td>
-                    <td><input type="number" placeholder="PSV" id="left_aca_vm_cm_sec" class="input"></td>
+                        <td><input type="number" placeholder="PSV" id="left_aca_vs_cm_sec" class="input"></td>
+                        <td><input type="number" placeholder="EDV" id="left_aca_vd_cm_sec" class="input"></td>
+                        <td><input type="number" placeholder="MEAN" id="left_aca_vm_cm_sec" class="input"></td>
+                        <td><input type="number" step="0.01" placeholder="PI" id="left_aca_pi" class="input"></td>
                 </tr>
                 <tr>
                     <td>PCA:</td>
-                    <td><input type="number" placeholder="MEAN" id="left_pca_vs_cm_sec" class="input"></td>
-                    <td><input type="number" step="0.01" placeholder="PI" id="left_pca_pi" class="input"></td>
-                    <td><input type="number" placeholder="EDV" id="left_pca_vd_cm_sec" class="input"></td>
-                    <td><input type="number" placeholder="PSV" id="left_pca_vm_cm_sec" class="input"></td>
+                        <td><input type="number" placeholder="PSV" id="left_pca_vs_cm_sec" class="input"></td>
+                        <td><input type="number" placeholder="EDV" id="left_pca_vd_cm_sec" class="input"></td>
+                        <td><input type="number" placeholder="MEAN" id="left_pca_vm_cm_sec" class="input"></td>
+                        <td><input type="number" step="0.01" placeholder="PI" id="left_pca_pi" class="input"></td>
                 </tr>
                 <tr>
-                    <td>VA:</td>
-                    <td><input type="number" placeholder="MEAN" id="left_va_vs_cm_sec" class="input"></td>
-                    <td><input type="number" step="0.01" placeholder="PI" id="left_va_pi" class="input"></td>
-                    <td><input type="number" placeholder="EDV" id="left_va_vd_cm_sec" class="input"></td>
-                    <td><input type="number" placeholder="PSV" id="left_va_vm_cm_sec" class="input"></td>
+                    <td>tICA:</td>
+                        <td><input type="number" placeholder="PSV" id="left_ica_vs_cm_sec" class="input"></td>
+                        <td><input type="number" placeholder="EDV" id="left_ica_vd_cm_sec" class="input"></td>
+                        <td><input type="number" placeholder="MEAN" id="left_ica_vm_cm_sec" class="input"></td>
+                        <td><input type="number" step="0.01" placeholder="PI" id="left_ica_pi" class="input"></td>
                 </tr>
                 <tr>
                     <td  id="left_ex_vm_cm_sec" class="fullrow" colspan="5">
@@ -252,21 +284,28 @@
                 <div id="other" class="div">
                     <table id="other" class="table">
                         <tr id="other" class="hRow1"><th colspan="5">Other</th></tr>
-                        <tr id="other" class="oRow2"><th>Vessel</th><th>PSV</th><th>EDV</th><th>PI</th><th>MEAN</th></tr>
+                        <tr id="other" class="oRow2"><th>Vessel</th><th>PSV</th><th>EDV</th><th>MEAN</th><th>PI</th></tr>
                         <tr>
-                        <td>OA:</td>
-                        <td><input type="number" placeholder="PSV" id="oa_vs_cm_sec" class="input"></td>
-                        <td><input type="number" placeholder="EDV" id="oa_vd_cm_sec" class="input"></td>
-                        <td><input type="number" step="0.01" placeholder="PI" id="oa_pi" class="input"></td>
-                        <td><input type="number" placeholder="MEAN" id="oa_vm_cm_sec" class="input"></td>
-                    </tr>
-                    <tr>
-                    <td>BA:</td>
-                        <td><input type="number" placeholder="PSV" id="ba_vs_cm_sec" class="input"></td>
-                        <td><input type="number" placeholder="EDV" id="ba_vd_cm_sec" class="input"></td>
-                        <td><input type="number" step="0.01" placeholder="PI" id="ba_pi" class="input"></td>
-                        <td><input type="number" placeholder="MEAN" id="ba_vm_cm_sec" class="input"></td>
-                    </tr>
+                            <td>VA:</td>
+                                <td><input type="number" placeholder="PSV" id="right_va_vs_cm_sec" class="input"></td>
+                                <td><input type="number" placeholder="EDV" id="right_va_vd_cm_sec" class="input"></td>
+                                <td><input type="number" placeholder="MEAN" id="right_va_vm_cm_sec" class="input"></td>
+                                <td><input type="number" step="0.01" placeholder="PI" id="right_va_pi" class="input"></td>
+                        </tr>
+                        <tr>
+                            <td>BA:</td>
+                                <td><input type="number" placeholder="PSV" id="ba_vs_cm_sec" class="input"></td>
+                                <td><input type="number" placeholder="EDV" id="ba_vd_cm_sec" class="input"></td>
+                                <td><input type="number" placeholder="MEAN" id="ba_vm_cm_sec" class="input"></td>
+                                <td><input type="number" step="0.01" placeholder="PI" id="ba_pi" class="input"></td>
+                        </tr>
+                        <tr>
+                            <td>OA:</td>
+                                <td><input type="number" placeholder="PSV" id="oa_vs_cm_sec" class="input"></td>
+                                <td><input type="number" placeholder="EDV" id="oa_vd_cm_sec" class="input"></td>
+                                <td><input type="number" placeholder="MEAN" id="oa_vm_cm_sec" class="input"></td>
+                                <td><input type="number" step="0.01" placeholder="PI" id="oa_pi" class="input"></td>
+                        </tr>
                     <!-- <tr>
                         <td><input type="text" placeholder="other" id="other" class="input"></td>
                         <td><input type="number" placeholder="PSV" id="oVs" class="input"></td>
@@ -278,6 +317,25 @@
                 </div>
             </div>
             </div>
+            <br>
+            <div id="risk" class="hide" style="display: contents;">
+                <p id="risk" class="hide">Display</p>
+            </div>
+            <label id="risk_assessment" class="label">Risk Assessment: </label><select id="risk_assessment" class="input">
+                <option id="1" class="risk">Low Risk</option>
+                <option id="2" class="risk">Conditional Risk</option>
+                <option id="3" class="risk">High Risk</option>
+            </select>
+            <br><br>
+            <label id="outcome" class="label">Outcome: </label><select id="outcome" class="input">
+                <option id="1" class="outcome">Normal</option>
+                <option id="2" class="outcome">Moderate deficits</option>
+                <option id="3" class="outcome">Severe deficits</option>
+                <option id="4" class="outcome">Died</option>
+            </select>
+            <br><br>
+            <label id="comments" class="label">Comments: </label><input type="text" id="comments" class="input">
+            <br><br>
         </div>    
         <button id="submetb" class="button">Submit</button>
         <script src="tableCSVexporter.js"></script>

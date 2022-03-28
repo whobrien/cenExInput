@@ -1,19 +1,28 @@
-div#locationinfo {
+#locationinfo.site {
     border: 3px double black;
 }
 
-div#patInfo {
-    border: 3px double black;
+#patinfo.nochange {
+    border: 3px double red;
 }
 
-div#patinfochange
+#patinfo.change {
+    border: 3px double green;
+}
 
-table#right {
+/*div#patinfochange*/
+
+#right.table {
     border: 2px black;
     background-color: lightpink;
 }
 
-table#left {
+#left.table {
     border: 2px black;
     background-color: lightseagreen;
+}
+
+#other.table {
+    border: 2px black;
+    background-color: lightskyblue;
 }

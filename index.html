@@ -33,7 +33,7 @@
             </select></label>
         </div>
         <br><br>
-        <div id="patinfo">
+        <div id="patinfo" class="div">
             <div id="patinfo" class="nochange"> <!--This div is for patient data that does not change-->
                 <label id="first_name" class="label">First Name: <input type="text" placeholder="First" id="first_name" class="input"></label>
                 <label id="last_name" class="label">Last Name: <input type="text" placeholder="Last" id="last_name" class="input"></label>
@@ -51,7 +51,7 @@
                 <label id="medical_hx" class="label">Patient History: <input type="text" id="medical_hx" class="input"></label>
             </div>
             <br><br>
-            <div id="patVitals" class="change">
+            <div id="patinfo" class="change">
                 <label id="study_date" class="label">Study Date: <input type="date" id="study_date" class="input"></label>
                 <label id="tcd_exam" class="label">First or Repeat Exam: <select id="tcm_exam" class="input">
                     <option id="tcd1">First</option>
@@ -135,57 +135,57 @@
                 <!--<img src="img/CoW2.png" alt="Circle of Willis" width="95%">-->
                 <div id="right" class="div">
                 <table id="right" class="table">
-            <tr id="right" class="hRow1"><th colspan="5">Right</th></tr>
-            <tr id="right" class="hRow2"><th>Vessel</th><th>PSV</th><th>EDV</th><th>PI</th><th>MEAN</th></tr>
-                <tr>
-                <td>MCA:</td>
-                <td><input type="number" placeholder="PSV" id="right_mca_vs_cm_sec" class="input"></td>
-                <td><input type="number" placeholder="EDV" id="right_mca_vd_cm_sec" class="input"></td>
-                <td><input type="number" step="0.01" placeholder="PI" id="right_mca_pi" class="input"></td>
-                <td><input type="number" placeholder="MEAN" id="right_mca_vm_cm_sec" class="input"></td>
-            </tr>
-            <tr>
-            <td>ACA:</td>
-                <td><input type="number" placeholder="PSV" id="right_aca_vs_cm_sec" class="input"></td>
-                <td><input type="number" placeholder="EDV" id="right_aca_vd_cm_sec" class="input"></td>
-                <td><input type="number" step="0.01" placeholder="PI" id="right_aca_pi" class="input"></td>
-                <td><input type="number" placeholder="MEAN" id="right_aca_vm_cm_sec" class="input"></td>
-            </tr>
-            <tr>
-                <td>PCA:</td>
-                <td><input type="number" placeholder="PSV" id="right_pca_vs_cm_sec" class="input"></td>
-                <td><input type="number" placeholder="EDV" id="right_pca_vd_cm_sec" class="input"></td>
-                <td><input type="number" step="0.01" placeholder="PI" id="right_pca_pi" class="input"></td>
-                <td><input type="number" placeholder="MEAN" id="right_pca_vm_cm_sec" class="input"></td>
-            </tr>
-            <tr>
-                <td>VA:</td>
-                <td><input type="number" placeholder="PSV" id="right_va_vs_cm_sec" class="input"></td>
-                <td><input type="number" placeholder="EDV" id="right_va_vd_cm_sec" class="input"></td>
-                <td><input type="number" step="0.01" placeholder="PI" id="right_va_pi" class="input"></td>
-                <td><input type="number" placeholder="MEAN" id="right_va_vm_cm_sec" class="input"></td>
-            </tr>
-            <tr>
-                <td  id="right_ex_ica_vm_cm_sec" class="fullrow" colspan="5">
-                    Ex-ICA :<input type="number" placeholder="EICA" id="right_ex_ica_vm_cm_sec" class="input">
-                </td>
-            </tr>
-            <tr>
-                <td  id="right_ex_ica_lr" class="fullrow" colspan="5">
-                    Lindegaard Ratio: <input type="number" step="0.01" placeholder="LR" id="right_ex_ica_lr" class="input">
-                </td>
-            </tr>
-            <tr>
-                <td  id="right_cv_vm_cm_sec" class="fullrow" colspan="5">
-                    MCA Vein: <input type="number" placeholder="MCAVein" id="right_cv_vm_cm_sec" class="input">
-                </td>
-            </tr>
-            <tr>
-                <td  id="right_jvf_vm_cm_sec" class="fullrow" colspan="5">
-                    Jugular Vein: <input type="number" step="0.01" placeholder="JVein" id="right_jvf_vm_cm_sec" class="input">
-                </td>
-            </tr>
-            </table>
+                    <tr id="right" class="hRow1"><th colspan="5">Right</th></tr>
+                    <tr id="right" class="hRow2"><th>Vessel</th><th>PSV</th><th>EDV</th><th>PI</th><th>MEAN</th></tr>
+                    <tr>
+                        <td>MCA:</td>
+                        <td><input type="number" placeholder="PSV" id="right_mca_vs_cm_sec" class="input"></td>
+                        <td><input type="number" placeholder="EDV" id="right_mca_vd_cm_sec" class="input"></td>
+                        <td><input type="number" step="0.01" placeholder="PI" id="right_mca_pi" class="input"></td>
+                        <td><input type="number" placeholder="MEAN" id="right_mca_vm_cm_sec" class="input"></td>
+                    </tr>
+                    <tr>
+                        <td>ACA:</td>
+                        <td><input type="number" placeholder="PSV" id="right_aca_vs_cm_sec" class="input"></td>
+                        <td><input type="number" placeholder="EDV" id="right_aca_vd_cm_sec" class="input"></td>
+                        <td><input type="number" step="0.01" placeholder="PI" id="right_aca_pi" class="input"></td>
+                        <td><input type="number" placeholder="MEAN" id="right_aca_vm_cm_sec" class="input"></td>
+                    </tr>
+                    <tr>
+                        <td>PCA:</td>
+                        <td><input type="number" placeholder="PSV" id="right_pca_vs_cm_sec" class="input"></td>
+                        <td><input type="number" placeholder="EDV" id="right_pca_vd_cm_sec" class="input"></td>
+                        <td><input type="number" step="0.01" placeholder="PI" id="right_pca_pi" class="input"></td>
+                        <td><input type="number" placeholder="MEAN" id="right_pca_vm_cm_sec" class="input"></td>
+                    </tr>
+                    <tr>
+                        <td>VA:</td>
+                        <td><input type="number" placeholder="PSV" id="right_va_vs_cm_sec" class="input"></td>
+                        <td><input type="number" placeholder="EDV" id="right_va_vd_cm_sec" class="input"></td>
+                        <td><input type="number" step="0.01" placeholder="PI" id="right_va_pi" class="input"></td>
+                        <td><input type="number" placeholder="MEAN" id="right_va_vm_cm_sec" class="input"></td>
+                    </tr>
+                    <tr>
+                        <td  id="right_ex_ica_vm_cm_sec" class="fullrow" colspan="5">
+                            Ex-ICA :<input type="number" placeholder="EICA" id="right_ex_ica_vm_cm_sec" class="input">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td  id="right_ex_ica_lr" class="fullrow" colspan="5">
+                            Lindegaard Ratio: <input type="number" step="0.01" placeholder="LR" id="right_ex_ica_lr" class="input">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td  id="right_cv_vm_cm_sec" class="fullrow" colspan="5">
+                            MCA Vein: <input type="number" placeholder="MCAVein" id="right_cv_vm_cm_sec" class="input">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td  id="right_jvf_vm_cm_sec" class="fullrow" colspan="5">
+                            Jugular Vein: <input type="number" step="0.01" placeholder="JVein" id="right_jvf_vm_cm_sec" class="input">
+                        </td>
+                    </tr>
+                </table>
             <br>
             <br>
             </div>

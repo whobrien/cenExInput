@@ -9,19 +9,22 @@
         <input type="file" id="upfile" accept=".csv" multiple>
         <button id="upfileconfirm">Upload Confirm</button>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
-        <script>const res1 = [];
-            const res2 = [];
+        <script>
+            const res1 = [];
+            let farr = [];
+            //const res2 = [];
             const uploadconfirm = document.getElementById("upfileconfirm").addEventListener("click", () => {
-                Papa.parse(document.getElementById("upfile").files, {
+                Papa.parse(document.getElementById("upfile").files[0], {
                     download: true,
-                    header: true,
+                    header: false,
                     skipEmptyLines: true,
                     complete: function(results) {
                         console.log(results);
-                        //res1.push(results[0]);
-                        //res2.push(results[1]);
+                        farr = Array.from(results.data[0]);
+                        //res1.push(results);
                     }
                 });
-            });</script>
+            });
+            </script>
     </body>
 </html>

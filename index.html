@@ -15,22 +15,22 @@
 
             <label id="other_sonographer" class="label">Sonographer Name: <input type="text" id="other_sonographer" class="input"></label>
             <label id="sonographer" class="label">Sonographer Role: <select id="sonographer" class="input">
-                <option id="role1">Intensivist</option>
-                <option id="role2">Neurologist</option>
-                <option id="role3">Radiologist</option>
-                <option id="role4">Other</option>
+                <option value="1" id="role1">Intensivist</option>
+                <option value="2" id="role2">Neurologist</option>
+                <option value="3" id="role3">Radiologist</option>
+                <option value="4" id="role4">Other</option>
             </select></label>
             <br><br>
             <label id="location" class="label">Location: <select id="location" class="input">
-                <option id="site1">PICU</option>
-                <option id="site2">CICU</option>
-                <option id="site3">Kinshasa</option>
-                <option id="site4">Lodja</option>
-                <option id="site5">Bunia</option> <!--Need to replace Bunia with Nyankunde-->
-                <option id="site6">Lusaka</option>
-                <option id="site9">Chipata</option>
-                <option id="site7">Blantyre</option>
-                <option id="site8">Other</option>
+                <option value="1" id="site1">PICU</option>
+                <option value="2" id="site2">CICU</option>
+                <option value="3" id="site3">Kinshasa</option>
+                <option value="4" id="site4">Lodja</option>
+                <option value="5" id="site5">Bunia</option> <!--Need to replace Bunia with Nyankunde-->
+                <option value="6" id="site6">Lusaka</option>
+                <option value="9" id="site9">Chipata</option>
+                <option value="7" id="site7">Blantyre</option>
+                <option value="8" id="site8">Other</option>
             </select></label>
         </div>
         <br><br>
@@ -43,7 +43,7 @@
                 <br><br>
                 <label id="mrn" class="label">ID/MRN: <input type="text" placeholder="ID/MRN" id="mrn" class="input"></label>
                 <br><br>
-                <label id="age_entered" class="label">Age: <input type="number" placeholder="Age" id="age_entered" class="input"></label>
+                <label id="age_entered" class="label">Age: <input type="number" placeholder="Age" step="0.1" id="age_entered" class="input"></label>
                 <label id="dob" class="label">Date of Birth: <input type="date" id="dob" class="input"></label>
                 <br><br>
                 <label id="sex" class="label">Sex: <select id="sex" class="input">
@@ -57,27 +57,56 @@
             <div id="patinfo" class="change">
                 <label id="study_date" class="label">Study Date: <input type="date" id="study_date" class="input"></label>
                 <label id="tcd_exam" class="label">First or Repeat Exam: <select id="tcm_exam" class="input">
-                    <option id="tcd1">First</option>
-                    <option id="tcd2">Repeat</option>
+                    <option value="1" id="tcd1">First</option>
+                    <option value="2" id="tcd2">Repeat</option>
                 </select></label>
                 <br><br>
-                <label id="tcd_indication" class="label">Indication: <select id="tcd_indication" class="input">
-                    <option id="tcd_indication__1">Acute Change in Neurologic Exam</option>
-                    <option id="tcd_indication__2">AVM</option>
-                    <option id="tcd_indication__3">Brain Death</option>
-                    <option id="tcd_indication__4">Cardiac Arrest</option>
-                    <option id="tcd_indication__5">Cerebral Malaria</option>
-                    <option id="tcd_indication__6">Emboli Detection</option>
-                    <option id="tcd_indication__7">Meningitis/Encephalitis</option>
-                    <option id="tcd_indication__8">Normative Values</option>
-                    <option id="tcd_indication__9">PRES</option>
-                    <option id="tcd_indication__10">Research</option>
-                    <option id="tcd_indication__11">Sickle Cell Disease</option>
-                    <option id="tcd_indication__12">Stroke</option>
-                    <option id="tcd_indication__13">TBI</option>
-                    <option id="tcd_indication__14">Vasospasm Screening</option>
-                    <option id="tcd_indication__15">Other</option>
+                <label id="scan_number" class="label">Scan Number: <select id="scan_number" class="input">
+                    <option value="" id="scan_numbernull"></option>
+                    <option value="2" id="scan_number2">2</option>
+                    <option value="3" id="scan_number3">3</option>
+                    <option value="4" id="scan_number4">4</option>
+                    <option value="5" id="scan_number5">5</option>
+                    <option value="6" id="scan_number6">6</option>
+                    <option value="7" id="scan_number7">7</option>
+                    <option value="8" id="scan_number8">8</option>
+                    <option value="9" id="scan_number9">9</option>
+                    <option value="10" id="scan_number10">10</option>
+                    <option value="11" id="scan_number11">11</option>
+                    <option value="12" id="scan_number12">12</option>
                 </select></label>
+                <br><br>
+                <label id="tcd_indication" class="label">Indication: </label> <!--checkbox field in REDCAP -->
+                    <br>
+                    <input type="checkbox" value="1" id="tcd_indication__1"><label>Acute Change in Neurologic Exam</label>
+                    <br>
+                    <input type="checkbox" value="1" id="tcd_indication__2"><label>AVM</label>
+                    <br>
+                    <input type="checkbox" value="1" id="tcd_indication__3"><label>Brain Death</label>
+                    <br>
+                    <input type="checkbox" value="1" id="tcd_indication__4"><label>Cardiac Arrest</label>
+                    <br>
+                    <input type="checkbox" value="1" id="tcd_indication__5"><label>Cerebral Malaria</label>
+                    <br>
+                    <input type="checkbox" value="1" id="tcd_indication__6"><label>Emboli Detection</label>
+                    <br>
+                    <input type="checkbox" value="1" id="tcd_indication__7"><label>Meningitis/Encephalitis</label>
+                    <br>
+                    <input type="checkbox" value="1" id="tcd_indication__8"><label>Normative Values</label>
+                    <br>
+                    <input type="checkbox" value="1" id="tcd_indication__9"><label>PRES</label>
+                    <br>
+                    <input type="checkbox" value="1" id="tcd_indication__10"><label>Research</label>
+                    <br>
+                    <input type="checkbox" value="1" id="tcd_indication__11"><label>Sickle Cell Disease</label>
+                    <br>
+                    <input type="checkbox" value="1" id="tcd_indication__12"><label>Stroke</label>
+                    <br>
+                    <input type="checkbox" value="1" id="tcd_indication__13"><label>TBI</label>
+                    <br>
+                    <input type="checkbox" value="1" id="tcd_indication__14"><label>Vasospasm Screening</label>
+                    <br>
+                    <input type="checkbox" value="1" id="tcd_indication__15"><label>Other</label>
                 <div id="sicklecell" class="hide" style="display: block">
                     <br><br>
                     <label id="scd_age_dx" class="lable">Age at Diagnosis: </label><input type="number" min="0" max="18" id="scd_age_dx" class="input">
@@ -87,77 +116,93 @@
                     <br>
                     <label id="scd_hydroxy" class="label">Hydroxyurea therapy?: </label>
                         <select id="scd_hydroxy" class="input">
-                            <option id="yes1">Yes</option>
-                            <option id="no0">No</option>
+                            <option value="0" id="no">No</option>
+                            <option value="1" id="yes">Yes</option>
                         </select>
                     <br>
                     <label id="scd_stroke" class="label">Previous Stroke?: </label>
                         <select id="scd_stroke" class="input">
-                            <option id="yes1">Yes</option>
-                            <option id="no0">No</option>
+                            <option value="0" id="no">No</option>
+                            <option value="1" id="yes">Yes</option>
                         </select>
                     <div id="scd_stroke" class="hide" style="display: block">
-                        <label id="residual_deficits_storke" class="label">What are the remaining neurologic defiits?: </label>
+                        <label id="residual_deficits_storke" class="label">What are the remaining neurologic deficits?: </label>
                         <input type="text" id="residual_deficits_stroke" class="input">
                     </div>
                     <div id="scd_neuro_sym" class="hide" style="display: block">
                         <label id="scd_neuro_sym" class="label">New neurologic symptonms since last visit?: </label>
                         <select id="scd_neuro_sym" class="input">
-                            <option id="yes1">Yes</option>
-                            <option id="no0">No</option>
+                            <option value="0" id="no">No</option>
+                            <option value="1" id="yes">Yes</option>
                         </select>
                         <input type="text" id="residual_deficits_neuro" class="input">
                     </div>
-                    <label id="scd_dx" class="label">Hbg: </label><select id="scd_dx" class="input">
-                        <option id="aa1">AA</option>
-                        <option id="AS2">AS</option>
-                        <option id="SS3">SS</option>
-                    </select>
-                    <label id="wpc" class="label">White Bloodcells: <input type="number" placeholder="WPC" id="wpc" class="input"></label>      
-                    <label id="platelets" class="label">Platelets: <input type="number" placeholder="Plts" id="platelets" class="input"></label>
                 </div>
+                <br><br>
+                <label id="scd_dx" class="label">Hbg: </label><select id="scd_dx" class="input">
+                    <option value="" id="null"></option>
+                    <option value="1" id="aa1">AA</option>
+                    <option value="2" id="AS2">AS</option>
+                    <option value="3" id="SS3">SS</option>
+                </select>
+                <label id="wpc" class="label">White Bloodcells: <input type="number" placeholder="WPC" id="wpc" class="input"></label>      
+                <label id="platelets" class="label">Platelets: <input type="number" placeholder="Plts" id="platelets" class="input"></label>
                 <br><br>
                 <label id="height" class="label">Height: <input type="number" placeholder="Height" id="height" class="input">cm</label>      
                 <label id="weight" class="label">Weight: <input type="number" placeholder="Weight" id="weight" class="input">kg</label>
                 <br><br>
-                <label id="muac" class="label">MUAC: <input type="number" placeholder="MUAC" step="0.01" id="muac" class="input"></label> <!--check what are units?-->
+                <label id="muac" class="label">MUAC: <input type="number" placeholder="MUAC" step="0.01" id="muac" class="input"></label>
                 <br><br>
                 <label id="temperature" class="label">Temperature: <input type="number" placeholder="Temperature" value="37" step="0.1" id="temperature" class="input">C</label>
                 <br><br>
-                <label id="hr" class="label">Heart Rate: <input type="number" placeholder="HR" min="0" max="250" id="hr" class="input"></label> <!--check what are units?-->
+                <label id="hr" class="label">Heart Rate: <input type="number" placeholder="HR" min="0" max="250" id="hr" class="input"></label>
+                <br><br>
+                <label id="spo" class="label">?SPO?: <input type="number" min="0" max="100" placeholder="SPO" id="spo" class="input"></label>
                 <br><br>
                 <label id="bp" class="label">Blood Pressure: <input type="number" placeholder="Systolic"id="sbp" class="input"> / <input type="number" placeholder="Diastolic" id="dbp" class="input"></label> <!--check what are units?-->
                 <br><br>
                 <label id="bcs" class="label">BCS: <input type="number"  min="0" max="5" placeholder="BCS" id="bcs" class="input"></label> <!--What are typcal values-->
                 <br><br>
-                <label id="hemoglobin" class="label">Hemoglobin: <input type="number" placeholder="Hbg/Hct/PCV" min="2" max="20" step="0.01" id="hemoglobin" class="input">%</label>
+                <label id="hemoglobin" class="label">Hemoglobin: <input type="number" placeholder="Hbg/Hct/PCV" min="2" max="20" step="0.1" id="hemoglobin" class="input"></label>
                 <br><br>
-                <label id="glucose" class="label">Glucose: <input type="number"  placeholder="Glucose" id="glucose" class="input"></label> <!--What are typcal values-->
+                <label id="glucose" class="label">Glucose: <input type="number"  placeholder="Glucose" step="0.1" id="glucose" class="input"></label> <!--What are typcal values-->
                 <br><br>
-                <label id="lactate" class="label">Lactate: <input type="number" placeholder="Lactate" id="lactate" class="input"></label>
+                <label id="lactate" class="label">Lactate: <input type="number" placeholder="Lactate" step="0.1" id="lactate" class="input"></label>
                 <br><br>
                 <label id="bloodgas" class="label">Blood Gas:</label>
                     <br>
                     <label id="ph" class="label">pH: <input type="number" placeholder="pH" id="ph" class="input"></label>
-                    <label id="CO2" class="label">CO2: <input type="number" placeholder="CO2" id="co2" class="input"></label>
+                    <label id="co2" class="label">CO2: <input type="number" placeholder="CO2" id="co2" class="input"></label>
                     <label id="be" class="label">BE: <input type="number" placeholder="BE" id="be" class="input"></label>
-                    <label id="Na" class="label">Na: <input type="number" placeholder="Na" id="na" class="input"></label>
+                    <label id="na" class="label">Na: <input type="number" placeholder="Na" id="na" class="input"></label>
+                    <label id="hco3" class="label">HCO3: <input type="number" placeholder="HCO3" id="hco3" class="input"></label>
                 <br><br>
                 <label id="icp" class="label">Opening pressure on LP: <input type="number" min="1" max="60" placeholder="ICP" id="icp" class="input"></label>
                 <br><br>
-                <label id="anticonvulsants" class="label">Anticonvulsants: <select id="anticonvulsants" class="input">
-                    <option id="antic1" class="dropdown">Depakote</option>
-                    <option id="antic2" class="dropdown">Fosphenytoin</option>
-                    <option id="antic3" class="dropdown">Keppra</option>
-                    <option id="antic4" class="dropdown">Ketamine</option>
-                    <option id="antic5" class="dropdown">Onfi</option>
-                    <option id="antic6" class="dropdown">Pentobarbital</option>
-                    <option id="antic7" class="dropdown">Phenobarbital</option>
-                    <option id="antic8" class="dropdown">Propofol</option>
-                    <option id="antic9" class="dropdown">Versed</option>
-                    <option id="antic10" class="dropdown">Vimpat</option>
-                    <option id="antic11" class="dropdown">Other</option>
-                </select></label>
+                <label id="anticonvulsants" class="label">Anticonvulsants: 
+                    <br>
+                    <input type="checkbox" value="1" id="anticonvulsants___1" class="dropdown">Depakote</option>
+                    <br>
+                    <input type="checkbox" value="1" id="anticonvulsants___2" class="dropdown">Fosphenytoin</option>
+                    <br>
+                    <input type="checkbox" value="1" id="anticonvulsants___3" class="dropdown">Keppra</option>
+                    <br>
+                    <input type="checkbox" value="1" id="anticonvulsants___4" class="dropdown">Ketamine</option>
+                    <br>
+                    <input type="checkbox" value="1" id="anticonvulsants___5" class="dropdown">Onfi</option>
+                    <br>
+                    <input type="checkbox" value="1" id="anticonvulsants___6" class="dropdown">Pentobarbital</option>
+                    <br>
+                    <input type="checkbox" value="1" id="anticonvulsants___7" class="dropdown">Phenobarbital</option>
+                    <br>
+                    <input type="checkbox" value="1" id="anticonvulsants___8" class="dropdown">Propofol</option>
+                    <br>
+                    <input type="checkbox" value="1" id="anticonvulsants___9" class="dropdown">Versed</option>
+                    <br>
+                    <input type="checkbox" value="1" id="anticonvulsants___10" class="dropdown">Vimpat</option>
+                    <br>
+                    <input type="checkbox" value="1" id="anticonvulsants___11" class="dropdown">Other</option>
+                </label>
                 <br><br>
                 <label id="electrographic_seizures" class="label">Electrographic seizures?: <select id="electrographic_seizures" class="input">
                     <option id="esy1" class="dropdown">Yes</option>
@@ -323,16 +368,16 @@
                 <p id="risk" class="hide">Display</p>
             </div>
             <label id="risk_assessment" class="label">Risk Assessment: </label><select id="risk_assessment" class="input">
-                <option id="1" class="risk">Low Risk</option>
-                <option id="2" class="risk">Conditional Risk</option>
-                <option id="3" class="risk">High Risk</option>
+                <option value="1" id="1" class="risk">Low Risk</option>
+                <option value="2" id="2" class="risk">Conditional Risk</option>
+                <option value="3" id="3" class="risk">High Risk</option>
             </select>
             <br><br>
             <label id="outcome" class="label">Outcome: </label><select id="outcome" class="input">
-                <option id="1" class="outcome">Normal</option>
-                <option id="2" class="outcome">Moderate deficits</option>
-                <option id="3" class="outcome">Severe deficits</option>
-                <option id="4" class="outcome">Died</option>
+                <option value="1" id="1" class="outcome">Normal</option>
+                <option value="2" id="2" class="outcome">Moderate deficits</option>
+                <option value="3" id="3" class="outcome">Severe deficits</option>
+                <option value="4" id="4" class="outcome">Died</option>
             </select>
             <br><br>
             <label id="comments" class="label">Comments: </label><input type="text" id="comments" class="input">

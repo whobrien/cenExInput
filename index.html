@@ -26,7 +26,7 @@
                 <option value="2" id="site2">CICU</option>
                 <option value="3" id="site3">Kinshasa</option>
                 <option value="4" id="site4">Lodja</option>
-                <option value="5" id="site5">Bunia</option> <!--Need to replace Bunia with Nyankunde-->
+                <option value="5" id="site5">Bunia</option> <!-- Bunia will be replaced with Nyankunde in RCdb-->
                 <option value="6" id="site6">Lusaka</option>
                 <option value="9" id="site9">Chipata</option>
                 <option value="7" id="site7">Blantyre</option>
@@ -61,19 +61,27 @@
                     <option value="2" id="tcd2">Repeat</option>
                 </select></label>
                 <br><br>
-                <label id="scan_number" class="label">Scan Number: <select id="scan_number" class="input">
-                    <option value="" id="scan_numbernull"></option>
-                    <option value="2" id="scan_number2">2</option>
-                    <option value="3" id="scan_number3">3</option>
-                    <option value="4" id="scan_number4">4</option>
-                    <option value="5" id="scan_number5">5</option>
-                    <option value="6" id="scan_number6">6</option>
-                    <option value="7" id="scan_number7">7</option>
-                    <option value="8" id="scan_number8">8</option>
-                    <option value="9" id="scan_number9">9</option>
-                    <option value="10" id="scan_number10">10</option>
-                    <option value="11" id="scan_number11">11</option>
-                    <option value="12" id="scan_number12">12</option>
+                <label id="redcap_event_name" class="label">Exam Day: <select id="redcap_event_name" class="input">
+                    <option value="baseline_arm_1" id="baseline">Baseline</option>
+                    <option value="day_2_arm_1" id="day_2">Day 2</option>
+                    <option value="day_3_arm_1" id="day_2">Day 3</option>
+                    <option value="day_4_arm_1" id="day_2">Day 4</option>
+                    <option value="day_5_arm_1" id="day_2">Day 5</option>
+                    <option value="day_6_arm_1" id="day_2">Day 6</option>
+                    <option value="day_7_arm_1" id="day_2">Day 7</option>
+                    <option value="day_8_arm_1" id="day_2">Day 8</option>
+                    <option value="day_9_arm_1" id="day_2">Day 9</option>
+                    <option value="day_10_arm_1" id="day_10">Day 10</option>
+                    <option value="day_11_arm_1" id="day_11">Day 11</option>
+                    <option value="day_12_arm_1" id="day_12">Day 12</option>
+                    <option value="day_13_arm_1" id="day_13">Day 13</option>
+                    <option value="day_14_arm_1" id="day_14">Day 14</option>
+                    <option value="day_15_arm_1" id="day_15">Day 15</option>
+                    <option value="day_16_arm_1" id="day_16">Day 16</option>
+                    <option value="day_17_arm_1" id="day_17">Day 17</option>
+                    <option value="day_18_arm_1" id="day_18">Day 18</option>
+                    <option value="day_19_arm_1" id="day_19">Day 19</option>
+                    <option value="day_20_arm_1" id="day_20">Day 20</option>
                 </select></label>
                 <br><br>
                 <label id="tcd_indication" class="label">Indication: </label> <!--checkbox field in REDCAP -->
@@ -139,15 +147,6 @@
                     </div>
                 </div>
                 <br><br>
-                <label id="scd_dx" class="label">Hbg: </label><select id="scd_dx" class="input">
-                    <option value="" id="null"></option>
-                    <option value="1" id="aa1">AA</option>
-                    <option value="2" id="AS2">AS</option>
-                    <option value="3" id="SS3">SS</option>
-                </select>
-                <label id="wpc" class="label">White Bloodcells: <input type="number" placeholder="WPC" id="wpc" class="input"></label>      
-                <label id="platelets" class="label">Platelets: <input type="number" placeholder="Plts" id="platelets" class="input"></label>
-                <br><br>
                 <label id="height" class="label">Height: <input type="number" placeholder="Height" id="height" class="input">cm</label>      
                 <label id="weight" class="label">Weight: <input type="number" placeholder="Weight" id="weight" class="input">kg</label>
                 <br><br>
@@ -157,13 +156,24 @@
                 <br><br>
                 <label id="hr" class="label">Heart Rate: <input type="number" placeholder="HR" min="0" max="250" id="hr" class="input"></label>
                 <br><br>
-                <label id="spo" class="label">?SPO?: <input type="number" min="0" max="100" placeholder="SPO" id="spo" class="input"></label>
+                <label id="spo" class="label">SPO2: <input type="number" min="0" max="100" placeholder="SPO2" id="spo" class="input"></label>
                 <br><br>
                 <label id="bp" class="label">Blood Pressure: <input type="number" placeholder="Systolic"id="sbp" class="input"> / <input type="number" placeholder="Diastolic" id="dbp" class="input"></label> <!--check what are units?-->
                 <br><br>
                 <label id="bcs" class="label">BCS: <input type="number"  min="0" max="5" placeholder="BCS" id="bcs" class="input"></label> <!--What are typcal values-->
                 <br><br>
                 <label id="hemoglobin" class="label">Hemoglobin: <input type="number" placeholder="Hbg/Hct/PCV" min="2" max="20" step="0.1" id="hemoglobin" class="input"></label>
+                <br><br>
+                <lable id="scd_dx" class="title">Sickle Cell: </lable>
+                <br>
+                <label id="scd_dx" class="label">Hbg: </label><select id="scd_dx" class="input">
+                    <option value="" id="null"></option>
+                    <option value="1" id="aa1">AA</option>
+                    <option value="2" id="AS2">AS</option>
+                    <option value="3" id="SS3">SS</option>
+                </select>
+                <label id="wpc" class="label">White Bloodcells: <input type="number" placeholder="WPC" id="wpc" class="input"></label>      
+                <label id="platelets" class="label">Platelets: <input type="number" placeholder="Plts" id="platelets" class="input"></label>
                 <br><br>
                 <label id="glucose" class="label">Glucose: <input type="number"  placeholder="Glucose" step="0.1" id="glucose" class="input"></label> <!--What are typcal values-->
                 <br><br>

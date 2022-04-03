@@ -9,7 +9,15 @@ let exportCSV = function() {
         let Data = [];
         for (let id in data) {
             hData.push(data[id].id);
-            rData.push(data[id].value);
+            if (data[id].checked === undefined) {
+                rData.push(data[id].value);
+            }
+            else if (data[id].checked === false) {
+                rData.push("");
+            }
+            else {
+                rData.push(1);
+            }
         }
         iData = head.map(function(el, i, arry){
             if (hData.findIndex(elem => elem === el) === -1) {

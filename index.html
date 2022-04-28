@@ -14,24 +14,26 @@
             <br><br> -->
 
             <label id="sonographer" class="label">Sonographer Role: <select id="sonographer" class="input">
+                <option value="4" id="role4">Other</option>
                 <option value="1" id="role1">Intensivist</option>
                 <option value="2" id="role2">Neurologist</option>
                 <option value="3" id="role3">Radiologist</option>
-                <option value="4" id="role4">Other</option>
             </select></label>
             <br>
-            <label id="other_sonographer" class="label">Sonographer Name: <input type="text" id="other_sonographer" class="input"></label>
-            <br><br>
-            <label id="location" class="label">Location: <select id="location" class="input">
-                <option value="1" id="site1">PICU</option>
-                <option value="2" id="site2">CICU</option>
-                <option value="3" id="site3">Kinshasa</option>
-                <option value="4" id="site4">Lodja</option>
-                <option value="5" id="site5">Bunia</option> <!-- Bunia will be replaced with Nyankunde in RCdb-->
-                <option value="6" id="site6">Lusaka</option>
-                <option value="9" id="site9">Chipata</option>
-                <option value="7" id="site7">Blantyre</option>
-                <option value="8" id="site8">Other</option>
+            <div id="hide_1" class="hdiv">
+                <label id="other_sonographer" class="label">Sonographer Name: <input type="text" id="other_sonographer" class="input"></label>
+                <br>
+            </div><br>
+                <label id="location" class="label">Location: <select id="location" class="input">
+                    <option value="1" id="site1">PICU</option>
+                    <option value="2" id="site2">CICU</option>
+                    <option value="3" id="site3">Kinshasa</option>
+                    <option value="4" id="site4">Lodja</option>
+                    <option value="5" id="site5">Bunia</option> <!-- Bunia will be replaced with Nyankunde in RCdb-->
+                    <option value="6" id="site6">Lusaka</option>
+                    <option value="9" id="site9">Chipata</option>
+                    <option value="7" id="site7">Blantyre</option>
+                    <option value="8" id="site8">Other</option>
             </select></label>
         </div>
         <br><br>
@@ -87,36 +89,36 @@
                 <br><br>
                 <label id="tcd_indication" class="label">Indication: </label> <!--checkbox field in REDCAP -->
                     <br>
-                    <input type="checkbox" id="tcd_indication___1" class="input"><label>Acute Change in Neurologic Exam</label>
+                    <input type="checkbox" id="tcd_indication___1" class="input tcd_ind"><label>Acute Change in Neurologic Exam</label>
                     <br>
-                    <input type="checkbox" id="tcd_indication___2" class="input"><label>AVM</label>
+                    <input type="checkbox" id="tcd_indication___2" class="input tcd_ind"><label>AVM</label>
                     <br>
-                    <input type="checkbox" id="tcd_indication___3" class="input"><label>Brain Death</label>
+                    <input type="checkbox" id="tcd_indication___3" class="input tcd_ind"><label>Brain Death</label>
                     <br>
-                    <input type="checkbox" id="tcd_indication___4" class="input"><label>Cardiac Arrest</label>
+                    <input type="checkbox" id="tcd_indication___4" class="input tcd_ind"><label>Cardiac Arrest</label>
                     <br>
-                    <input type="checkbox" id="tcd_indication___5" class="input"><label>Cerebral Malaria</label>
+                    <input type="checkbox" id="tcd_indication___5" class="input tcd_ind"><label>Cerebral Malaria</label>
                     <br>
-                    <input type="checkbox" id="tcd_indication___6" class="input"><label>Emboli Detection</label>
+                    <input type="checkbox" id="tcd_indication___6" class="input tcd_ind"><label>Emboli Detection</label>
                     <br>
-                    <input type="checkbox" id="tcd_indication___7" class="input"><label>Meningitis/Encephalitis</label>
+                    <input type="checkbox" id="tcd_indication___7" class="input tcd_ind"><label>Meningitis/Encephalitis</label>
                     <br>
-                    <input type="checkbox" id="tcd_indication___8" class="input"><label>Normative Values</label>
+                    <input type="checkbox" id="tcd_indication___8" class="input tcd_ind"><label>Normative Values</label>
                     <br>
-                    <input type="checkbox" id="tcd_indication___9" class="input"><label>PRES</label>
+                    <input type="checkbox" id="tcd_indication___9" class="input tcd_ind"><label>PRES</label>
                     <br>
-                    <input type="checkbox" id="tcd_indication___10" class="input"><label>Research</label>
+                    <input type="checkbox" id="tcd_indication___10" class="input"><label>Research</label> <!--This class is NOT tcd_ind do to hide_5 div-->
                     <br>
-                    <input type="checkbox" id="tcd_indication___11" class="input"><label>Sickle Cell Disease</label>
+                    <input type="checkbox" id="tcd_indication___11" class="input tcd_ind"><label>Sickle Cell Disease</label>
                     <br>
-                    <input type="checkbox" id="tcd_indication___12" class="input"><label>Stroke</label>
+                    <input type="checkbox" id="tcd_indication___12" class="input tcd_ind"><label>Stroke</label>
                     <br>
-                    <input type="checkbox" id="tcd_indication___13" class="input"><label>TBI</label>
+                    <input type="checkbox" id="tcd_indication___13" class="input tcd_ind"><label>TBI</label>
                     <br>
-                    <input type="checkbox" id="tcd_indication___14" class="input"><label>Vasospasm Screening</label>
+                    <input type="checkbox" id="tcd_indication___14" class="input tcd_ind"><label>Vasospasm Screening</label>
                     <br>
-                    <input type="checkbox" id="tcd_indication___15" class="input"><label>Other</label>
-                <div id="sicklecell" class="hide" style="display: block">
+                    <input type="checkbox" id="tcd_indication___15" class="input tcd_ind"><label>Other</label>
+                <div id="hide_2" class="hdiv2" style="display: none">
                     <br><br>
                     <label id="scd_age_dx" class="lable">Age at Diagnosis: </label><input type="number" min="0" max="18" id="scd_age_dx" class="input">
                     <br>
@@ -125,25 +127,29 @@
                     <br>
                     <label id="scd_hydroxy" class="label">Hydroxyurea therapy?: </label>
                         <select id="scd_hydroxy" class="input">
-                            <option value="0" id="no">No</option>
-                            <option value="1" id="yes">Yes</option>
+                            <option value="" id="scd_hydroxy"></option>
+                            <option value="0" id="scd_hydroxy">No</option>
+                            <option value="1" id="scd_hydroxy">Yes</option>
                         </select>
                     <br>
                     <label id="scd_stroke" class="label">Previous Stroke?: </label>
                         <select id="scd_stroke" class="input">
-                            <option value="0" id="no">No</option>
-                            <option value="1" id="yes">Yes</option>
+                            <option value="" id="scd_stroke"></option>
+                            <option value="0" id="scd_stroke">No</option>
+                            <option value="1" id="scd_stroke">Yes</option>
                         </select>
-                    <div id="scd_stroke" class="hide" style="display: block">
+                    <div id="hide_3" class="hdiv3" style="display: none">
                         <label id="residual_deficits_storke" class="label">What are the remaining neurologic deficits?: </label>
                         <input type="text" id="residual_deficits_stroke" class="input">
                     </div>
-                    <div id="scd_neuro_sym" class="hide" style="display: block">
-                        <label id="scd_neuro_sym" class="label">New neurologic symptonms since last visit?: </label>
-                        <select id="scd_neuro_sym" class="input">
+                    <br>
+                    <label id="scd_neuro_sym" class="label">New neurologic symptonms since last visit?: </label>
+                    <select id="scd_neuro_sym" class="input">
                             <option value="0" id="no">No</option>
                             <option value="1" id="yes">Yes</option>
                         </select>
+                    <div id="hide_4" class="hdiv4" style="display: none">
+                        <label>What are the new symptoms?: </label>
                         <input type="text" id="residual_deficits_neuro" class="input">
                     </div>
                 </div>
@@ -375,28 +381,32 @@
             </div>
             </div>
             <br>
-            <div id="risk" class="hide" style="display: contents;">
+            <div id="hide_2b" class="hdiv2b" style="display: none;">
                 <p id="risk" class="hide">Display</p>
-            </div>
             <label id="risk_assessment" class="label">Risk Assessment: </label><select id="risk_assessment" class="input">
+                <option value="" id="null" class="risk"></option>
                 <option value="1" id="1" class="risk">Low Risk</option>
                 <option value="2" id="2" class="risk">Conditional Risk</option>
                 <option value="3" id="3" class="risk">High Risk</option>
             </select>
-            <br><br>
-            <label id="outcome" class="label">Outcome: </label><select id="outcome" class="input">
-                <option value="1" id="1" class="outcome">Normal</option>
-                <option value="2" id="2" class="outcome">Moderate deficits</option>
-                <option value="3" id="3" class="outcome">Severe deficits</option>
-                <option value="4" id="4" class="outcome">Died</option>
-            </select>
-            <br><br>
+            <br></div><br>
+            <div id="hide_5" class="hdiv5" style="display: none;">
+                <label id="outcome" class="label">Outcome: </label><select id="outcome" class="input">
+                    <option value="" id="null" class="outcome"></option>
+                    <option value="1" id="1" class="outcome">Normal</option>
+                    <option value="2" id="2" class="outcome">Moderate deficits</option>
+                    <option value="3" id="3" class="outcome">Severe deficits</option>
+                    <option value="4" id="4" class="outcome">Died</option>
+                </select>
+                <br>
+            </div>
+            <br>
             <label id="comments" class="label">Comments: </label><input type="text" id="comments" class="input">
             <br><br>
             <label id="transcranial_doppler_ultrasound_worksheet_complete" class="label">Complete Record: </label><select id="transcranial_doppler_ultrasound_worksheet_complete" class="input">
-                <option value="2" id="complete1" class="risk">Complete</option>
-                <option value="1" id="complete2" class="risk">Unverified</option>
-                <option value="0" id="complete3" class="risk">Incomplete</option>   
+                <option value="2" id="complete1" class="worksheet">Complete</option>
+                <option value="1" id="complete2" class="worksheet">Unverified</option>
+                <option value="0" id="complete3" class="worksheet">Incomplete</option>   
             </select>
             <br><br>
         </div>    

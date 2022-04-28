@@ -1,8 +1,8 @@
 
 
-let exportCSV = function() {
+let exportCSV = function () {
     const inputs = Array.from(document.getElementsByClassName("input")); //grab all input class from page
-    let rcCSVimput = function(data, head) { //Redcap CSV input function takes inputs and database templete headers and outputs CSV
+    let rcCSVimput = function (data, head) { //Redcap CSV input function takes inputs and database templete headers and outputs CSV
         let hData = [];
         let rData = [];
         let iData = [];
@@ -19,18 +19,18 @@ let exportCSV = function() {
                 rData.push(1);
             }
         }
-        iData = head.map(function(el, i, arry){
+        iData = head.map(function (el, i, arry) {
             if (hData.findIndex(elem => elem === el) === -1) {
-              return '';
+                return '';
             }
             else {
-              return rData[hData.findIndex(elem => elem === el)];
+                return rData[hData.findIndex(elem => elem === el)];
             }
-          });
+        });
 
         return Data = `${head}\n${iData}`;
     }
-    
+
 
     let rcHead = [ //TCD Redcap database headers as of 3/24/2022
         "record_id",
@@ -320,32 +320,90 @@ let exportCSV = function() {
         "label_vessel_3",
         "transcranial_doppler_ultrasound_worksheet_complete" //TCD Redcap database headers as off 3/24/2022
     ];
-    
+
     console.log(rcCSVimput(inputs, rcHead));
     return rcCSVimput(inputs, rcHead);
 
 }
+
+let hide1 = document.getElementById('hide_1');
+
+document.querySelector('select#sonographer.input').addEventListener("input", function (e) {
+    if (e.target.value == 4) {
+        hide1.style.display = "";
+    }
+    else {
+        hide1.style.display = "none";
+    }
+});
+
+let hide2 = document.getElementById('hide_2');
+let hide2b = document.getElementById('hide_2b');
+
+document.querySelector('input#tcd_indication___11.input').addEventListener("change", function (e) {
+    if (e.target.checked === true) {
+        hide2.style.display = "";
+        hide2b.style.display = "";
+    }
+        else {
+            hide2.style.display = "none";
+            hide2b.style.display = "none";
+        }
+    });
+
+    let hide3 = document.getElementById("hide_3");
+    document.querySelector('select#scd_stroke.input').addEventListener("input", function (el) {
+        if (el.target.value == 1) {
+            hide3.style.display = "";
+        }
+        else {
+            hide3.style.display = "none";
+        }
+    });
+
+    let hide4 = document.getElementById("hide_4");
+    document.querySelector('select#scd_neuro_sym.input').addEventListener("input", function (el) {
+        if (el.target.value == 1) {
+            hide4.style.display = "";
+        }
+        else {
+            hide4.style.display = "none";
+        }
+    });
+
+    let hide5 = document.getElementById("hide_5");
+    document.querySelector('.tcd_ind').addEventListener("input", function (el) {
+            if (el.checked === true) {
+                hide5.style.display = "";
+            }
+            else {
+                hide5.style.display = "none";
+            }
+        
+    });
+
+
 
 
 
 let btn = document.querySelector("button");
 
 
-        btn.addEventListener("click", () => {
-            //const exporter = new exportCSV();
-            const csvOutput = exportCSV();
-            //console.log(csvOutput);
-            const csvBlob = new Blob([csvOutput], { type: "text/csv" });
-            const blobUrl = URL.createObjectURL(csvBlob);
-            const anchorElement = document.createElement("a");
+btn.addEventListener("click", () => {
+    //const exporter = new exportCSV();
+    const csvOutput = exportCSV();
+    //console.log(csvOutput);
+    const csvBlob = new Blob([csvOutput], { type: "text/csv" });
+    const blobUrl = URL.createObjectURL(csvBlob);
+    const anchorElement = document.createElement("a");
 
-            anchorElement.href = blobUrl;
-            anchorElement.download = "table-export.csv";
-            anchorElement.click();
+    anchorElement.href = blobUrl;
+    anchorElement.download = "table-export.csv";
+    anchorElement.click();
 
-            setTimeout(() => {
-                URL.revokeObjectURL(blobUrl);
-            }, 500);
-        });
+    setTimeout(() => {
+        URL.revokeObjectURL(blobUrl);
+    }, 500);
+});
 
-        let sel = Array.from(document.querySelectorAll("select"));
+let sel = Array.from(document.querySelectorAll("select"));
